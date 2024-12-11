@@ -1,3 +1,5 @@
+const express = require('express');
+const app = express();
 const TelegramBot = require('node-telegram-bot-api');
 const fs = require('fs');
 const path = require('path');
@@ -484,3 +486,13 @@ bot.on('message', (msg) => {
           
             bot.answerCallbackQuery(callbackQuery.id);
           });
+
+          const PORT = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+    res.send('Hello from Render!');
+});
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});

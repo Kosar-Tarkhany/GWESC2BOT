@@ -12,6 +12,7 @@
   "dependencies": {
     "express": "^4.21.2",
     "fs": "^0.0.1-security",
+    "init": "^0.1.2",
     "node-telegram-bot-api": "^0.66.0",
     "path": "^0.12.7"
   },
