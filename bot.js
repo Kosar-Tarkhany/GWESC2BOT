@@ -20,7 +20,7 @@ bot.onText(/\/info (.+)/, (msg, match) => {
   const input = match[1].trim(); 
 
   if (msg.from.id === 5167117549) {  
-    const infoFilePath = path.join('C:', 'Users', 'ZETTA', 'Desktop', 'GWESC 2 BOT', 'info.json');
+    const infoFilePath = path.join('info.json');
 
     fs.readFile(infoFilePath, 'utf8', (err, data) => {
       if (err) {
@@ -85,8 +85,8 @@ bot.onText(/\/ban (\d+)/, (msg, match) => {
           "Captain Name": captainName
         };
 
-        const bannedFilePath = path.join('C:', 'Users', 'ZETTA', 'Desktop', 'GWESC 2 BOT', 'banned.json');
-        const infoFilePath = path.join('C:', 'Users', 'ZETTA', 'Desktop', 'GWESC 2 BOT', 'info.json');
+        const bannedFilePath = path.join('banned.json');
+        const infoFilePath = path.join('info.json');
 
         fs.readFile(bannedFilePath, 'utf8', (err, data) => {
           let bannedUsers = [];
@@ -132,9 +132,9 @@ bot.onText(/\/unban (\d+)/, (msg, match) => {
   const unbannedChatId = match[1];
 
   if (Object.values(captains).includes(msg.from.id)) {
-    const bannedFilePath = path.join('C:', 'Users', 'ZETTA', 'Desktop', 'GWESC 2 BOT', 'banned.json');
-    const unbanFilePath = path.join('C:', 'Users', 'ZETTA', 'Desktop', 'GWESC 2 BOT', 'unban.json');
-    const infoFilePath = path.join('C:', 'Users', 'ZETTA', 'Desktop', 'GWESC 2 BOT', 'info.json');
+    const bannedFilePath = path.join('banned.json');
+    const unbanFilePath = path.join('unban.json');
+    const infoFilePath = path.join('info.json');
 
     fs.readFile(bannedFilePath, 'utf8', (err, data) => {
       if (err) {
@@ -296,7 +296,7 @@ bot.on('callback_query', (callbackQuery) => {
     if (captains[captainKey]) {
         const chatId = callbackQuery.message.chat.id;
 
-        const bannedFilePath = path.join('C:', 'Users', 'ZETTA', 'Desktop', 'GWESC 2 BOT', 'banned.json');
+        const bannedFilePath = path.join('banned.json');
         let bannedUsers = [];
 
         try {
@@ -394,9 +394,9 @@ bot.on('message', (msg) => {
         const username = msg.from.username || null; 
         if (!username) {
           const picturePaths = [
-            'C:/Users/ZETTA/Downloads/sarkrda1.jpg',
-            'C:/Users/ZETTA/Downloads/sarkrda2.jpg',
-            'C:/Users/ZETTA/Downloads/sarkrda3.jpg'
+            'sarkrda1.jpg',
+            'sarkrda2.jpg',
+            'sarkrda3.jpg'
           ];
     
           const userChatId = msg.chat.id; 
