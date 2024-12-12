@@ -10,7 +10,7 @@ const bot = new TelegramBot(token, { polling: true });
 const captains = {
   kosar: 5167117549,
   zhiar: 987654321,
-  ayman: 112233445,
+  ayman: 919303335,
   safo: 1130039353,
   bruce: 556677889,
   kenley: 667788990
